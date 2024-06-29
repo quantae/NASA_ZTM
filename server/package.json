@@ -7,6 +7,7 @@
     "test": "jest --detectOpenHandles",
     "test-watch": "jest --watchAll",
     "start": "node src/server.js",
+    "server": "node src/server.js",
     "watch": "nodemon src/server.js",
     "cluster": "pm2 start src/server.js -i max"
   },
@@ -17,8 +18,10 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "cors": "^2.8.5",
     "csv-parse": "^5.5.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "helmet": "^7.1.0",
     "mongoose": "^8.3.3",

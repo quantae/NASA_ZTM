@@ -1,10 +1,13 @@
+require('dotenv').config();
 const https = require("https");
 const fs = require("fs");
-const path = require('path')
+const path = require('path');
+
 
 const app = require("./app");
 const { mongoConnect } = require("./services/mongo");
 const { loadPlanetData } = require("./models/planets.model");
+const {loadLaunchData} = require("./models/launches.model");
 const PORT = process.env.PORT || 8000;
 // now we shall use https, thus, our node built in https would now be https
 // also we shall not use the server below with only (app), but an this.(object, app)
@@ -30,6 +33,7 @@ const server = https.createServer(
 async function startServer() {
   await mongoConnect();
   await loadPlanetData();
+  await loadLaunchData();
 
   server.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`);

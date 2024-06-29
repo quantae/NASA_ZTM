@@ -12,7 +12,7 @@ const api_v1 = require('./routes/api_v1')
 //middleware
 app.use(helmet()); // for security.
 app.use(cors({
-    origin: ['http://localhost:3002', 'http://54.145.28.153:8000/', 'https://localhost:3002']
+    origin: ['https://localhost:3002', 'http://54.145.28.153:8000/', 'https://localhost:3002', 'https://localhost:3000']
 }));
 
 // Middleware to set headers

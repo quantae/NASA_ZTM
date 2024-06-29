@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 /**
@@ -5,8 +6,7 @@ const mongoose = require('mongoose');
  * Mongo Db connection services
  */
 
-const MONGO_URL =
-  "mongodb+srv://gerald_ofori:2l8D9qE0psWe4tiF@nodetuts.aeyqkla.mongodb.net/NASA?retryWrites=true&w=majority&appName=Nodetuts";
+const MONGO_URL = process.env.MONGO_URL;
 
  // mongoose connection event emitter. 
  mongoose.connection.once('open', () => {

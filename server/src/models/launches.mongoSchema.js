@@ -28,7 +28,7 @@ mission: {
 // }
 target: {
     type: String,
-    required: true,
+   
 },
 customer: [String],
 upcoming: {
@@ -42,7 +42,7 @@ success: {
 }
 });
 
-// connects lauchesSchema to the launches collection.
+// connects lauNchesSchema to the launches collection.
 module.exports = mongoose.model('launch',launchesSchema);
 // not that the first argument should always be the singular of the collection. 
 // Mongoose will make is lowercase and generate plural version of the collection name. eg. 'launches'
