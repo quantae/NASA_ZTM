@@ -11,7 +11,7 @@ function getPagination(query) {
   return {
     // we return the variables as an object.
     skip: skip,
-    limit,
+    limit, // limit is number of items per page
   };
 }
 
