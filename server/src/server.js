@@ -8,7 +8,7 @@ const app = require("./app");
 const { mongoConnect } = require("./services/mongo");
 const { loadPlanetData } = require("./models/planets.model");
 const {loadLaunchData} = require("./models/launches.model");
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT;
 // now we shall use https, thus, our node built in https would now be https
 // also we shall not use the server below with only (app), but an this.(object, app)
 // const server = https.createServer(app);
