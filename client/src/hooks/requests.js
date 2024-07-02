@@ -1,4 +1,4 @@
-const API_URL = `https://localhost:8000/v1`;
+//const API_URL = `https://localhost:8000/v1`;
 
 async function httpGetPlanets() {
   // TODO: Once API is ready.
