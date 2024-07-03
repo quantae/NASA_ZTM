@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Docker Publish Pipeline
 
 on:
   push:
